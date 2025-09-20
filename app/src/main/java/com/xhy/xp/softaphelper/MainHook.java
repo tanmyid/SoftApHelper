@@ -41,7 +41,7 @@ public class MainHook implements IXposedHookLoadPackage {
 
     private static final String callerMethodName_Q = "configureIPv4";
 
-    private static final String WIFI_HOST_IFACE_ADDR = "192.168.43.1";
+    private static final String WIFI_HOST_IFACE_ADDR = "192.168.26.1";
 
     // TetheringType
     public static final int TETHERING_INVALID = -1;
