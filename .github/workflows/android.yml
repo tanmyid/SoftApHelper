@@ -15,7 +15,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      # Set up JDK (pakai 17 biar cocok sama Gradle 9.x)
+      # Set up JDK (Gradle 9.x butuh minimal Java 17)
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -23,11 +23,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      # Build APK (debug)
+      # Build APK debug langsung pakai gradle
       - name: Build Debug APK
-        run: gradle build
+        run: gradle assembleDebug
 
-      # Upload APK hasil build
+      # Upload hasil APK biar bisa didownload dari tab Actions
       - name: Upload Debug APK
         uses: actions/upload-artifact@v3
         with:
